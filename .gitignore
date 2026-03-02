@@ -1,0 +1,18 @@
+.env
+.env.*
+
+# Backend env files
+backend/.env
+backend/.env.*
+
+# Frontend env files
+frontend/.env
+frontend/.env.*
+
+# Common credential/key files
+*.pem
+*.key
+*.crt
+*.pfx
+*.p12
+
