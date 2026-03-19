@@ -34,7 +34,7 @@ const Sidebar = () => {
     ];
 
     return (
-        <aside className="w-[352px] bg-[#2C2F36] text-white flex flex-col h-screen fixed left-0 top-0 z-50 shadow-2xl overflow-hidden font-sans">
+        <aside className="w-[352px] bg-[#0f172a] text-white flex flex-col h-screen fixed left-0 top-0 z-50 shadow-2xl overflow-hidden font-sans border-r border-white/5">
             <div className="p-8">
                 <h1 className="text-2xl font-black tracking-tight flex items-center gap-1.5 whitespace-nowrap">
                     AI <span className="text-blue-500">Resume</span> Radar
@@ -67,8 +67,8 @@ const Sidebar = () => {
                                 key={`${item.name}-${idx}`}
                                 href={item.path}
                                 className={`flex items-center justify-between px-4 py-3 rounded-xl transition-all group ${isActive
-                                    ? 'bg-slate-700/50 text-white'
-                                    : 'text-slate-400 hover:bg-slate-700/30 hover:text-white'
+                                    ? 'bg-white/10 text-white shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]'
+                                    : 'text-slate-400 hover:bg-white/5 hover:text-white'
                                     }`}
                             >
                                 <div className="flex items-center gap-3">
