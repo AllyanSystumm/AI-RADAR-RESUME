@@ -126,19 +126,19 @@ export default function ApplyPage() {
                                 Job Description
                             </h2>
                             <div className="relative">
-                                <div className={`text-slate-600 leading-relaxed whitespace-pre-wrap bg-slate-50 p-6 rounded-xl border border-slate-100 transition-all duration-300 overflow-hidden ${!showFullDescription ? 'max-h-[180px]' : 'max-h-full'}`}>
+                                <div className={`text-slate-600 leading-relaxed whitespace-pre-wrap bg-slate-50 p-6 rounded-xl border border-slate-100 transition-all duration-300 overflow-hidden ${!showFullDescription ? 'max-h-[110px]' : 'max-h-full pb-12'}`}>
                                     {job.description}
                                 </div>
-                                {!showFullDescription && job.description.length > 300 && (
-                                    <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-slate-50 to-transparent pointer-events-none rounded-b-xl" />
+                                {!showFullDescription && job.description.length > 200 && (
+                                    <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-slate-50 to-transparent pointer-events-none rounded-b-xl" />
                                 )}
-                                {job.description.length > 300 && (
+                                {job.description.length > 200 && (
                                     <button
                                         type="button"
                                         onClick={() => setShowFullDescription(!showFullDescription)}
-                                        className="mt-3 text-blue-600 font-bold text-sm hover:text-blue-700 transition-colors uppercase tracking-wider"
+                                        className="mt-4 flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 hover:bg-blue-100 rounded-lg font-bold text-xs uppercase tracking-widest transition-all border border-blue-100 shadow-sm mx-auto"
                                     >
-                                        {showFullDescription ? 'Show Less' : 'Read Full Description'}
+                                        {showFullDescription ? 'Close Description' : 'View Full Job Details'}
                                     </button>
                                 )}
                             </div>
