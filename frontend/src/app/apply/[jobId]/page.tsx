@@ -24,6 +24,8 @@ export default function ApplyPage() {
     const [submitted, setSubmitted] = useState(false);
     const [error, setError] = useState("");
 
+    const [showFullDescription, setShowFullDescription] = useState(false);
+
     useEffect(() => {
         fetchJobDetails();
     }, [jobId]);
@@ -123,8 +125,22 @@ export default function ApplyPage() {
                                 <FileText className="w-5 h-5 text-blue-600" />
                                 Job Description
                             </h2>
-                            <div className="text-slate-600 leading-relaxed whitespace-pre-wrap bg-slate-50 p-6 rounded-xl border border-slate-100">
-                                {job.description}
+                            <div className="relative">
+                                <div className={`text-slate-600 leading-relaxed whitespace-pre-wrap bg-slate-50 p-6 rounded-xl border border-slate-100 transition-all duration-300 overflow-hidden ${!showFullDescription ? 'max-h-[180px]' : 'max-h-full'}`}>
+                                    {job.description}
+                                </div>
+                                {!showFullDescription && job.description.length > 300 && (
+                                    <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-slate-50 to-transparent pointer-events-none rounded-b-xl" />
+                                )}
+                                {job.description.length > 300 && (
+                                    <button
+                                        type="button"
+                                        onClick={() => setShowFullDescription(!showFullDescription)}
+                                        className="mt-3 text-blue-600 font-bold text-sm hover:text-blue-700 transition-colors uppercase tracking-wider"
+                                    >
+                                        {showFullDescription ? 'Show Less' : 'Read Full Description'}
+                                    </button>
+                                )}
                             </div>
                         </div>
 
