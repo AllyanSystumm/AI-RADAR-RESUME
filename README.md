@@ -68,4 +68,4 @@ An advanced AI-powered resume parser and candidate matching system.
    - **Integrated Chatbot**: The recruiter can ask directly, for example: "Give me the top scorer of the graphic designing job". The chatbot has full access to the database and can query candidate information.
 
 <img width="1647" height="892" alt="Application Overview" src="https://github.com/user-attachments/assets/c8dab815-beab-42a4-b14e-96d06b5361c8" />
-<img width="1647" height="892" alt="Futuristic Login UI" src="frontend/public/login-bg.png" />
+
