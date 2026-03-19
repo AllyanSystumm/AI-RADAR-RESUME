@@ -7,14 +7,15 @@ An advanced AI-powered resume parser and candidate matching system.
 - **Resume Parsing**: Extracts text and key information from uploaded resumes.
 - **AI Analysis**: Uses Groq (LLM) to analyze resumes against job descriptions.
 - **Job Management**: Create and manage job postings.
-- **Candidate Analyis**: View detailed analysis and scoring of candidates.
+- **Candidate Analysis**: View detailed analysis and scoring of candidates with interactive Radar Charts.
+- **Premium Authentication**: A futuristic, glassmorphism-styled login and signup experience with secure JWT-based session management.
 - **Chat Interface**: Context-aware chat to query candidate data.
-- **Modern UI**: Built with Next.js and Tailwind CSS.
+- **Modern UI**: Built with Next.js and Tailwind CSS with a cinematic, data-center aesthetic.
 
 ## Tech Stack
 
-- **Frontend**: Next.js, React, Tailwind CSS, TypeScript
-- **Backend**: FastAPI, Python, SQLAlchemy, SQLite
+- **Frontend**: Next.js, React, Tailwind CSS, TypeScript, Framer Motion
+- **Backend**: FastAPI, Python, SQLAlchemy, SQLite (via PBKDF2 hashing)
 - **AI/LLM**: Groq Cloud API
 - **Containerization**: Docker, Docker Compose
 
@@ -25,7 +26,11 @@ An advanced AI-powered resume parser and candidate matching system.
 
 ## Setup & Running
 
-1. **Clone the repository** (if applicable).
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/AllyanSystumm/AI-Radar-Resume.git
+   cd AI-Radar-Resume
+   ```
 
 2. **Configure Environment Variables**:
    
@@ -45,19 +50,22 @@ An advanced AI-powered resume parser and candidate matching system.
 
 4. **Access the Application**:
    - **Frontend**: [http://localhost:3000](http://localhost:3000)
-   - **Backend API Docs**: [http://localhost:8000/docs](http://localhost:8000/docs)
+   - **Backend API Docs**: [http://localhost:8001/docs](http://localhost:8001/docs)
 
 ## Project Structure
 
 - `backend/`: FastAPI application, database models, and services.
 - `frontend/`: Next.js frontend application.
-- `docker-compose.yml`: Docker services configurationn.
+- `docker-compose.yml`: Docker services configuration.
 
 ## Usage
 
-1. **Create a Job**: Go to the dashboard and post a new job with a description.
-2. **Apply**: Use the application form to upload a resume for a specific job.
-3. **View Analysis**: Check the job dashboard to see ranked candidates and detailed AI analysis.
-4. **Chat**: Use the chat interface to ask questions about the candidates.
+1. **Sign In**: Access the futuristic login page and create an account or sign in.
+2. **Create a Job**: After sign-in, you are automatically taken to the job creation dashboard.
+3. **Apply**: Use the application form to upload a resume for a specific job.
+4. **View Analysis**: Check the job dashboard to see ranked candidates and detailed AI analysis with Radar Charts.
+5. **Chat**: Use the chat interface to ask questions about the candidates.
    - **Integrated Chatbot**: The recruiter can ask directly, for example: "Give me the top scorer of the graphic designing job". The chatbot has full access to the database and can query candidate information.
-<img width="1647" height="892" alt="Screenshot from 2026-03-02 16-46-31" src="https://github.com/user-attachments/assets/c8dab815-beab-42a4-b14e-96d06b5361c8" />
+
+<img width="1647" height="892" alt="Application Overview" src="https://github.com/user-attachments/assets/c8dab815-beab-42a4-b14e-96d06b5361c8" />
+<img width="1647" height="892" alt="Futuristic Login UI" src="frontend/public/login-bg.png" />
