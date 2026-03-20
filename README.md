@@ -12,6 +12,23 @@ An advanced AI-powered resume parser and candidate matching system.
 - **Chat Interface**: Context-aware chat to query candidate data.
 - **Modern UI**: Built with Next.js and Tailwind CSS with a cinematic, data-center aesthetic.
 
+## Radar Analysis & Scoring
+
+The system uses a specialized **AI Radar Visualization** to provide a 360-degree view of a candidate's fit for a role.
+
+### How it Works
+
+1.  **Dynamic Competency Mapping**: For every job, the AI automatically identifies the **4 most critical competencies** (dimensions) required for success (e.g., *Frameworks*, *Cloud Tools*, *Architecture*, *Debugging*).
+2.  **Contextual Evaluation**: Candidates are scored on these specific dimensions relative to the Job Description (JD).
+3.  **Visual DNA**: The scores are plotted on a radar chart, creating a unique "visual profile" that allows recruiters to instantly identify strengths and gaps.
+
+### The Scoring Scale
+
+*   **10.0 (Center Point)**: Represents the "Ideal Candidate" as defined by the JD.
+*   **7.0 - 9.0 (Inner Circle)**: High Match / Expert Level proficiency.
+*   **4.0 - 6.0 (Middle Circle)**: Competent / Medium Match.
+*   **1.0 - 3.0 (Outer Circle)**: Beginner / Low Match or missing requirement.
+
 ## Tech Stack
 
 - **Frontend**: Next.js, React, Tailwind CSS, TypeScript, Framer Motion
